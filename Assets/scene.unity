@@ -437,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2333246135476635896, guid: bae3b6da9f558a04994badd5424cbd6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 2333246135476635896, guid: bae3b6da9f558a04994badd5424cbd6f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -445,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2333246135476635896, guid: bae3b6da9f558a04994badd5424cbd6f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.14
+      value: -3.813
       objectReference: {fileID: 0}
     - target: {fileID: 2333246135476635896, guid: bae3b6da9f558a04994badd5424cbd6f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -482,6 +482,10 @@ PrefabInstance:
     - target: {fileID: 2333246135476635899, guid: bae3b6da9f558a04994badd5424cbd6f, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333246135476635899, guid: bae3b6da9f558a04994badd5424cbd6f, type: 3}
+      propertyPath: m_TagString
+      value: Garde forestier
       objectReference: {fileID: 0}
     - target: {fileID: 2333246135483036881, guid: bae3b6da9f558a04994badd5424cbd6f, type: 3}
       propertyPath: m_Layer
@@ -966,7 +970,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -589.0826, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1702,8 +1706,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1992,7 +1996,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 1ed054079d09b32468b443374d833e6d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -2014,15 +2018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   animator: {fileID: 1334391830}
-  dialogues:
-  - Bienvenue dans votre nouveau poste de garde forestier !
-  - "Votre objectif ici est de prendre soin de cette f\xF4ret."
-  - "Nettoyer des aires de pique-nique, pr\xE9venir des \xE9ventuels incendies ou
-    encore notifier des anomiles, voici les t\xE2ches que tu dois accomplir. "
-  - "N'h\xE9site pas non plus \xE0 parler aux visiteurs si leur comportement est
-    dangereux pour la for\xEAt."
-  - Maintenant que tu connais tes objectifs il est temps de se mettre au travail
-    !
   uiManager: {fileID: 1559708759}
 --- !u!1001 &1460515437
 PrefabInstance:
@@ -2114,6 +2109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   textUI: {fileID: 1181910317}
+  authorUI: {fileID: 228876201}
+  canvas: {fileID: 1559708762}
 --- !u!114 &1559708760
 MonoBehaviour:
   m_ObjectHideFlags: 0
