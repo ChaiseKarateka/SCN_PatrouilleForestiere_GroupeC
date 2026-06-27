@@ -5,6 +5,7 @@ public class NPCInteraction : MonoBehaviour
 {
     public Animator animator;
     public UIManager uiManager;
+    public NPCPatrol npcPatrol;
 
     private string[] dialogues;
     private int index = 0;
@@ -25,12 +26,12 @@ public class NPCInteraction : MonoBehaviour
                 };
                 break;
 
-            case "Merchant":
+            case "Randonneur":
                 dialogues = new string[]
                 {
-                    "Bienvenue dans ma boutique !",
-                    "J'ai les meilleurs prix.",
-                    "Reviens quand tu veux !"
+                    "Bonjour monsieur, y-a-t-il un problème ?",
+                    "J'ai fait tombé mes déchets ? Vraiment désolé, je ne voulais pas salir la forêt.",
+                    "Merci de m'avoir prévenu, je vais faire plus attention à l'avenir."
                 };
                 break;
         }
@@ -38,6 +39,10 @@ public class NPCInteraction : MonoBehaviour
 
     public void Interact(Transform player)
     {
+        if (npcPatrol != null)
+        {
+            npcPatrol.StopPatrol();
+        }
         LoadDialogues();
         StartCoroutine(Talk(player));
     }
@@ -59,5 +64,11 @@ public class NPCInteraction : MonoBehaviour
         }
 
         index = 0;
+
+        if (npcPatrol != null)
+        {
+            npcPatrol.ResumePatrol();
+            npcPatrol.StopDropping();
+        }
     }
 }
